@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['game',['Game',['../class_game.html',1,'']]],
+  ['game_2ejava',['Game.java',['../_game_8java.html',1,'']]],
+  ['getactivebonus',['getActiveBonus',['../class_motor.html#a33b87f33f275b9f87ed7791857af2cf3',1,'Motor']]],
+  ['getaliens',['getAliens',['../class_motor.html#a787633e0544ca8c8dceb3f415b7aeeea',1,'Motor']]],
+  ['getbonus',['getBonus',['../class_motor.html#a42d5acc1b6be21bade008a427bef9c64',1,'Motor']]],
+  ['getdelaytir',['getDelayTir',['../class_alien.html#af08813497b68cf8a37fe1fb102e8ff49',1,'Alien.getDelayTir()'],['../class_player.html#af3f440fabf4174f321e854ff8fabd25a',1,'Player.getDelayTir()']]],
+  ['getdeplace',['getDeplace',['../class_player.html#acce5669fa54c5a76c5e69ad890ded0a6',1,'Player']]],
+  ['getdestroy',['getDestroy',['../class_alien.html#a7fd4cc9ee380d3bc3a31a9b39600d777',1,'Alien.getDestroy()'],['../class_tir.html#a9e55e211b9e34cd50e32fae6f066eb7c',1,'Tir.getDestroy()']]],
+  ['gethouses',['getHouses',['../class_motor.html#af1d6924fafe1e9d2ce3c77799c35a136',1,'Motor']]],
+  ['getlevel',['getLevel',['../class_game.html#a45ca829175e700eee22814f7692e9224',1,'Game']]],
+  ['getmotor',['getMotor',['../class_game.html#ad2ca85b9da3d4f432e80c4c30d27a04a',1,'Game']]],
+  ['getplayer',['getPlayer',['../class_motor.html#a054f1e6ac323e78270bcb2ed9687fb80',1,'Motor']]],
+  ['getscore',['getScore',['../class_game.html#a88c9ee21de18322252a578965d6d95d5',1,'Game']]],
+  ['gettime',['getTime',['../class_bonus.html#a2912fd692ce4fe1a7b34c4fa14c8fe9f',1,'Bonus']]],
+  ['gettirs',['getTirs',['../class_motor.html#ab31da9ce3d509a33029d6025f3596604',1,'Motor']]],
+  ['getvecy',['getVecY',['../class_alien.html#a006b25db50a54b9cbea4d901ffdd8f82',1,'Alien']]],
+  ['getvie',['getVie',['../class_game.html#aa1efcee841a5a0f096b824b1aca2bfb5',1,'Game']]],
+  ['getvitessetir',['getVitesseTir',['../class_player.html#a1e53e9e10195f64b4ae551747245c7f2',1,'Player']]],
+  ['getx',['getX',['../class_house.html#ac4d6f6fa84cdf4ae34c870a3fddfcbb3',1,'House']]],
+  ['gety',['getY',['../class_house.html#ae416ab0d84b498a9d1fd5c02a751bf4f',1,'House']]]
+];

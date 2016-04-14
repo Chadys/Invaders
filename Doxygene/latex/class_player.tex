@@ -1,0 +1,250 @@
+\hypertarget{class_player}{\section{Référence de la classe Player}
+\label{class_player}\index{Player@{Player}}
+}
+
+
+Graphe d'héritage de Player\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_player__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Player\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_player__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_player_a712a726b07cf901c040116d6d0c5cc66}{Player} ()
+\begin{DoxyCompactList}\small\item\em Constructeur du joueur. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a9a32aeb96a7184620e3342244e6d17ad}{proceed} (float timestep)
+\begin{DoxyCompactList}\small\item\em Methode actualisant la position de \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_adff9fbff40a2ad4a8fa2b89884e6e7d2}{shoot} ()
+\begin{DoxyCompactList}\small\item\em Methode de tir du joueur. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_acab62e8dde064015d176aae75fdcd263}{destruct} ()
+\begin{DoxyCompactList}\small\item\em Methode appelée en cas de collision entre le joueur et un missile. \end{DoxyCompactList}\item 
+double \hyperlink{class_player_acce5669fa54c5a76c5e69ad890ded0a6}{get\-Deplace} ()
+\begin{DoxyCompactList}\small\item\em Methode renvoyant le vecteur de déplacement. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_ae3de1d7541e006a1835428ea05d8ac5c}{set\-Deplace} (double pas)
+\begin{DoxyCompactList}\small\item\em Methode paramètrant le vecteur de deplacement. \end{DoxyCompactList}\item 
+float \hyperlink{class_player_af3f440fabf4174f321e854ff8fabd25a}{get\-Delay\-Tir} ()
+\begin{DoxyCompactList}\small\item\em Methode renvoyant le delai minimum entre deux tirs. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a1f3118b8d157fe53c585318d4914fc08}{set\-Delay\-Tir} (float delay)
+\begin{DoxyCompactList}\small\item\em Methode paramétrant le delai minimum entre deux tirs. \end{DoxyCompactList}\item 
+double \hyperlink{class_player_a1e53e9e10195f64b4ae551747245c7f2}{get\-Vitesse\-Tir} ()
+\begin{DoxyCompactList}\small\item\em Methode renvoyant la vitesse d'un missile tiré \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a884976391b424945d77108463de3b2b8}{set\-Vitesse\-Tir} (double vitesse)
+\begin{DoxyCompactList}\small\item\em Methode paramétrant la vitesse d'un missile tiré \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 13 du fichier Player.\-java.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_player_a712a726b07cf901c040116d6d0c5cc66}{\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection[{Player}]{\setlength{\rightskip}{0pt plus 5cm}Player.\-Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_a712a726b07cf901c040116d6d0c5cc66}
+
+
+Constructeur du joueur. 
+
+Appelle le constructeur d'Image\-View avec l'image du vaisseau du joueur. Initialise les deux sons associés au joueur. Place le joueur en bas et au milieu horizontalement de l'écran. Initialise les vecteurs, délai et chronomètre à leur valeur de départ. \hyperlink{class_player}{Player} n'hérite pas de \hyperlink{class_movit}{Movit} car il ne possède pas de vecteur de déplacement vertical et qu'on a besoin d'utiliser relocate() après avoir défini son image. 
+
+Définition à la ligne 37 du fichier Player.\-java.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_player_acab62e8dde064015d176aae75fdcd263}{\index{Player@{Player}!destruct@{destruct}}
+\index{destruct@{destruct}!Player@{Player}}
+\subsubsection[{destruct}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\-destruct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_acab62e8dde064015d176aae75fdcd263}
+
+
+Methode appelée en cas de collision entre le joueur et un missile. 
+
+Joue le son de collision entre le joueur et un missile. Retire une vie au joueur et, s'il n'en a plus, met le jeu sur l'écran de gameover. 
+
+Définition à la ligne 91 du fichier Player.\-java.
+
+\hypertarget{class_player_af3f440fabf4174f321e854ff8fabd25a}{\index{Player@{Player}!get\-Delay\-Tir@{get\-Delay\-Tir}}
+\index{get\-Delay\-Tir@{get\-Delay\-Tir}!Player@{Player}}
+\subsubsection[{get\-Delay\-Tir}]{\setlength{\rightskip}{0pt plus 5cm}float Player.\-get\-Delay\-Tir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_af3f440fabf4174f321e854ff8fabd25a}
+
+
+Methode renvoyant le delai minimum entre deux tirs. 
+
+
+
+Définition à la ligne 113 du fichier Player.\-java.
+
+\hypertarget{class_player_acce5669fa54c5a76c5e69ad890ded0a6}{\index{Player@{Player}!get\-Deplace@{get\-Deplace}}
+\index{get\-Deplace@{get\-Deplace}!Player@{Player}}
+\subsubsection[{get\-Deplace}]{\setlength{\rightskip}{0pt plus 5cm}double Player.\-get\-Deplace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_acce5669fa54c5a76c5e69ad890ded0a6}
+
+
+Methode renvoyant le vecteur de déplacement. 
+
+
+
+Définition à la ligne 101 du fichier Player.\-java.
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_acce5669fa54c5a76c5e69ad890ded0a6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_player_a1e53e9e10195f64b4ae551747245c7f2}{\index{Player@{Player}!get\-Vitesse\-Tir@{get\-Vitesse\-Tir}}
+\index{get\-Vitesse\-Tir@{get\-Vitesse\-Tir}!Player@{Player}}
+\subsubsection[{get\-Vitesse\-Tir}]{\setlength{\rightskip}{0pt plus 5cm}double Player.\-get\-Vitesse\-Tir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_a1e53e9e10195f64b4ae551747245c7f2}
+
+
+Methode renvoyant la vitesse d'un missile tiré 
+
+
+
+Définition à la ligne 125 du fichier Player.\-java.
+
+\hypertarget{class_player_a9a32aeb96a7184620e3342244e6d17ad}{\index{Player@{Player}!proceed@{proceed}}
+\index{proceed@{proceed}!Player@{Player}}
+\subsubsection[{proceed}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\-proceed (
+\begin{DoxyParamCaption}
+\item[{float}]{timestep}
+\end{DoxyParamCaption}
+)}}\label{class_player_a9a32aeb96a7184620e3342244e6d17ad}
+
+
+Methode actualisant la position de \hyperlink{class_player}{Player}. 
+
+Enlève le temps écoulé depuis le dernier \hyperlink{class_player_a9a32aeb96a7184620e3342244e6d17ad}{proceed()} à \char`\"{}current\-\_\-delay\char`\"{} (borné à 0). Actualise la position du joueur en l'empéchant de disparaître du cadre du jeu. Si le joueur sors du cadre en ajoutant le vecteur de déplacement à la position actuelle, alors on le positionne à la limite. 
+
+Définition à la ligne 55 du fichier Player.\-java.
+
+\hypertarget{class_player_a1f3118b8d157fe53c585318d4914fc08}{\index{Player@{Player}!set\-Delay\-Tir@{set\-Delay\-Tir}}
+\index{set\-Delay\-Tir@{set\-Delay\-Tir}!Player@{Player}}
+\subsubsection[{set\-Delay\-Tir}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\-set\-Delay\-Tir (
+\begin{DoxyParamCaption}
+\item[{float}]{delay}
+\end{DoxyParamCaption}
+)}}\label{class_player_a1f3118b8d157fe53c585318d4914fc08}
+
+
+Methode paramétrant le delai minimum entre deux tirs. 
+
+
+
+Définition à la ligne 119 du fichier Player.\-java.
+
+\hypertarget{class_player_ae3de1d7541e006a1835428ea05d8ac5c}{\index{Player@{Player}!set\-Deplace@{set\-Deplace}}
+\index{set\-Deplace@{set\-Deplace}!Player@{Player}}
+\subsubsection[{set\-Deplace}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\-set\-Deplace (
+\begin{DoxyParamCaption}
+\item[{double}]{pas}
+\end{DoxyParamCaption}
+)}}\label{class_player_ae3de1d7541e006a1835428ea05d8ac5c}
+
+
+Methode paramètrant le vecteur de deplacement. 
+
+
+
+Définition à la ligne 107 du fichier Player.\-java.
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_ae3de1d7541e006a1835428ea05d8ac5c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_player_a884976391b424945d77108463de3b2b8}{\index{Player@{Player}!set\-Vitesse\-Tir@{set\-Vitesse\-Tir}}
+\index{set\-Vitesse\-Tir@{set\-Vitesse\-Tir}!Player@{Player}}
+\subsubsection[{set\-Vitesse\-Tir}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\-set\-Vitesse\-Tir (
+\begin{DoxyParamCaption}
+\item[{double}]{vitesse}
+\end{DoxyParamCaption}
+)}}\label{class_player_a884976391b424945d77108463de3b2b8}
+
+
+Methode paramétrant la vitesse d'un missile tiré 
+
+
+
+Définition à la ligne 131 du fichier Player.\-java.
+
+\hypertarget{class_player_adff9fbff40a2ad4a8fa2b89884e6e7d2}{\index{Player@{Player}!shoot@{shoot}}
+\index{shoot@{shoot}!Player@{Player}}
+\subsubsection[{shoot}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\-shoot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_adff9fbff40a2ad4a8fa2b89884e6e7d2}
+
+
+Methode de tir du joueur. 
+
+Si le délai minimum entre deux tirs n'est pas encore écoulé, ne fais rien. Sinon, joue le son du tir, réinitialise le délai minimum, et ajoute un nouveau tir à la liste des tirs en appelant le constructeur de Tire en fonction de la position du joueur et de sa vitesse de tir. 
+
+Définition à la ligne 77 du fichier Player.\-java.
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_adff9fbff40a2ad4a8fa2b89884e6e7d2_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_player_8java}{Player.\-java}\end{DoxyCompactItemize}

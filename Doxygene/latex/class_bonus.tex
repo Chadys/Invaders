@@ -1,0 +1,255 @@
+\hypertarget{class_bonus}{\section{Référence de la classe Bonus}
+\label{class_bonus}\index{Bonus@{Bonus}}
+}
+
+
+Graphe d'héritage de Bonus\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_bonus__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Bonus\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_bonus__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bonus_a1d1e2ebe69d7e1ac68e2550f80d2e632}{Bonus} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Constructeur d'un bonus. \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_bonus_a09f19db4fdca514ddb4b526c4ed4cc4f}{collide} (\hyperlink{class_player}{Player} p)
+\begin{DoxyCompactList}\small\item\em Méthode détectant la collision entre bonus et joueur. \end{DoxyCompactList}\item 
+void \hyperlink{class_bonus_a42e90885234abf53398e0c5d0b47cf0d}{proceed} ()
+\begin{DoxyCompactList}\small\item\em Méthode actualisant la position d'un bonus. \end{DoxyCompactList}\item 
+void \hyperlink{class_bonus_a3082cd3a33dee61d0d3d28727508f834}{add\-Time\-Step} (float timestep)
+\begin{DoxyCompactList}\small\item\em Méthode ajoutant le temps écoulé (timestep) au chronomètre d'activation du bonus. \end{DoxyCompactList}\item 
+void \hyperlink{class_bonus_ae3818b4a920609eecb9e0be60cd7afc9}{active} ()
+\begin{DoxyCompactList}\small\item\em Méthode appelée à l'activation du bonus. \end{DoxyCompactList}\item 
+void \hyperlink{class_bonus_a43bd71425625417a8c37e919510f90c3}{inactive} ()
+\begin{DoxyCompactList}\small\item\em Méthode appelée à la désactivation du bonus. \end{DoxyCompactList}\item 
+float \hyperlink{class_bonus_a2912fd692ce4fe1a7b34c4fa14c8fe9f}{get\-Time} ()
+\begin{DoxyCompactList}\small\item\em Méthode retournant le temps écoulé depuis que le bonus s'est activé \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{class_bonus_a7ae08569114898b429584cbcec091c4d}{M\-A\-X\-T\-I\-M\-E} =10.\-0
+\begin{DoxyCompactList}\small\item\em Temps maximum durant lequel un bonus est actif. \end{DoxyCompactList}\item 
+static int \hyperlink{class_bonus_a62d1d7bef5df2d449bc67e1fb1985b5f}{S\-C\-O\-R\-E\-U\-P} =200
+\begin{DoxyCompactList}\small\item\em Score apporté par le bonus \char`\"{}score\char`\"{}. \end{DoxyCompactList}\item 
+static int \hyperlink{class_bonus_ab84109f50f0520fbfb36973c7e937528}{D\-I\-S\-T\-R\-E\-C\-U\-L\-E} =200
+\begin{DoxyCompactList}\small\item\em Distance de recul des ennemis causée par le bonus \char`\"{}recul\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 17 du fichier Bonus.\-java.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_bonus_a1d1e2ebe69d7e1ac68e2550f80d2e632}{\index{Bonus@{Bonus}!Bonus@{Bonus}}
+\index{Bonus@{Bonus}!Bonus@{Bonus}}
+\subsubsection[{Bonus}]{\setlength{\rightskip}{0pt plus 5cm}Bonus.\-Bonus (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_bonus_a1d1e2ebe69d7e1ac68e2550f80d2e632}
+
+
+Constructeur d'un bonus. 
+
+Appelle le constructeur de \hyperlink{class_movit}{Movit} en utilisant une image de bonus choisie au hasard. Diminue la position en X de la moitié de la largeur de l'image du bonus (pour que le bonus apparaisse au milieu de l'alien qui l'a lâché). Récupère l'index de l'image du bonus qui a été choisie au hasard pour pouvoir l'identifier. Récupère la paire d'effet in/actif de l'effet correspondant à l'index et les attribue respectivement à leur variable. Initialise le chronomètre à 0.\-0 . 
+
+Définition à la ligne 48 du fichier Bonus.\-java.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_bonus_ae3818b4a920609eecb9e0be60cd7afc9}{\index{Bonus@{Bonus}!active@{active}}
+\index{active@{active}!Bonus@{Bonus}}
+\subsubsection[{active}]{\setlength{\rightskip}{0pt plus 5cm}void Bonus.\-active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bonus_ae3818b4a920609eecb9e0be60cd7afc9}
+
+
+Méthode appelée à l'activation du bonus. 
+
+Lance l'Effet \char`\"{}actif\char`\"{} du bonus puis rajoute ce bonus à la liste d'effets en cours d'activation. 
+
+Définition à la ligne 166 du fichier Bonus.\-java.
+
+\hypertarget{class_bonus_a3082cd3a33dee61d0d3d28727508f834}{\index{Bonus@{Bonus}!add\-Time\-Step@{add\-Time\-Step}}
+\index{add\-Time\-Step@{add\-Time\-Step}!Bonus@{Bonus}}
+\subsubsection[{add\-Time\-Step}]{\setlength{\rightskip}{0pt plus 5cm}void Bonus.\-add\-Time\-Step (
+\begin{DoxyParamCaption}
+\item[{float}]{timestep}
+\end{DoxyParamCaption}
+)}}\label{class_bonus_a3082cd3a33dee61d0d3d28727508f834}
+
+
+Méthode ajoutant le temps écoulé (timestep) au chronomètre d'activation du bonus. 
+
+
+
+Définition à la ligne 89 du fichier Bonus.\-java.
+
+\hypertarget{class_bonus_a09f19db4fdca514ddb4b526c4ed4cc4f}{\index{Bonus@{Bonus}!collide@{collide}}
+\index{collide@{collide}!Bonus@{Bonus}}
+\subsubsection[{collide}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Bonus.\-collide (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{p}
+\end{DoxyParamCaption}
+)}}\label{class_bonus_a09f19db4fdca514ddb4b526c4ed4cc4f}
+
+
+Méthode détectant la collision entre bonus et joueur. 
+
+Appelle la fonction \hyperlink{class_bonus_a09f19db4fdca514ddb4b526c4ed4cc4f}{collide()} du moteur pour voir si une collision s'est produite entre l'image du bonus et du joueur. Joue un son si le joueur a attrapé le bonus. Renvoie vrai ou faux en fonction. 
+
+Définition à la ligne 64 du fichier Bonus.\-java.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{class_bonus_a09f19db4fdca514ddb4b526c4ed4cc4f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bonus_a09f19db4fdca514ddb4b526c4ed4cc4f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bonus_a2912fd692ce4fe1a7b34c4fa14c8fe9f}{\index{Bonus@{Bonus}!get\-Time@{get\-Time}}
+\index{get\-Time@{get\-Time}!Bonus@{Bonus}}
+\subsubsection[{get\-Time}]{\setlength{\rightskip}{0pt plus 5cm}float Bonus.\-get\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bonus_a2912fd692ce4fe1a7b34c4fa14c8fe9f}
+
+
+Méthode retournant le temps écoulé depuis que le bonus s'est activé 
+
+
+
+Définition à la ligne 190 du fichier Bonus.\-java.
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bonus_a2912fd692ce4fe1a7b34c4fa14c8fe9f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bonus_a43bd71425625417a8c37e919510f90c3}{\index{Bonus@{Bonus}!inactive@{inactive}}
+\index{inactive@{inactive}!Bonus@{Bonus}}
+\subsubsection[{inactive}]{\setlength{\rightskip}{0pt plus 5cm}void Bonus.\-inactive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bonus_a43bd71425625417a8c37e919510f90c3}
+
+
+Méthode appelée à la désactivation du bonus. 
+
+Lance l'Effet \char`\"{}inactif\char`\"{} du bonus. 
+
+Définition à la ligne 175 du fichier Bonus.\-java.
+
+\hypertarget{class_bonus_a42e90885234abf53398e0c5d0b47cf0d}{\index{Bonus@{Bonus}!proceed@{proceed}}
+\index{proceed@{proceed}!Bonus@{Bonus}}
+\subsubsection[{proceed}]{\setlength{\rightskip}{0pt plus 5cm}void Bonus.\-proceed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bonus_a42e90885234abf53398e0c5d0b47cf0d}
+
+
+Méthode actualisant la position d'un bonus. 
+
+Ajoute à l'ordonné du bonus sa vitesse verticale. Le bonus ne chutant que vers le bas, il n'a pas de déplacement horizontal. 
+
+Définition à la ligne 83 du fichier Bonus.\-java.
+
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_bonus_ab84109f50f0520fbfb36973c7e937528}{\index{Bonus@{Bonus}!D\-I\-S\-T\-R\-E\-C\-U\-L\-E@{D\-I\-S\-T\-R\-E\-C\-U\-L\-E}}
+\index{D\-I\-S\-T\-R\-E\-C\-U\-L\-E@{D\-I\-S\-T\-R\-E\-C\-U\-L\-E}!Bonus@{Bonus}}
+\subsubsection[{D\-I\-S\-T\-R\-E\-C\-U\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}int Bonus.\-D\-I\-S\-T\-R\-E\-C\-U\-L\-E =200\hspace{0.3cm}{\ttfamily [static]}}}\label{class_bonus_ab84109f50f0520fbfb36973c7e937528}
+
+
+Distance de recul des ennemis causée par le bonus \char`\"{}recul\char`\"{}. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Définition à la ligne 29 du fichier Bonus.\-java.
+
+\hypertarget{class_bonus_a7ae08569114898b429584cbcec091c4d}{\index{Bonus@{Bonus}!M\-A\-X\-T\-I\-M\-E@{M\-A\-X\-T\-I\-M\-E}}
+\index{M\-A\-X\-T\-I\-M\-E@{M\-A\-X\-T\-I\-M\-E}!Bonus@{Bonus}}
+\subsubsection[{M\-A\-X\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}double Bonus.\-M\-A\-X\-T\-I\-M\-E =10.\-0\hspace{0.3cm}{\ttfamily [static]}}}\label{class_bonus_a7ae08569114898b429584cbcec091c4d}
+
+
+Temps maximum durant lequel un bonus est actif. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Définition à la ligne 25 du fichier Bonus.\-java.
+
+\hypertarget{class_bonus_a62d1d7bef5df2d449bc67e1fb1985b5f}{\index{Bonus@{Bonus}!S\-C\-O\-R\-E\-U\-P@{S\-C\-O\-R\-E\-U\-P}}
+\index{S\-C\-O\-R\-E\-U\-P@{S\-C\-O\-R\-E\-U\-P}!Bonus@{Bonus}}
+\subsubsection[{S\-C\-O\-R\-E\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}int Bonus.\-S\-C\-O\-R\-E\-U\-P =200\hspace{0.3cm}{\ttfamily [static]}}}\label{class_bonus_a62d1d7bef5df2d449bc67e1fb1985b5f}
+
+
+Score apporté par le bonus \char`\"{}score\char`\"{}. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Définition à la ligne 27 du fichier Bonus.\-java.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_bonus_8java}{Bonus.\-java}\end{DoxyCompactItemize}

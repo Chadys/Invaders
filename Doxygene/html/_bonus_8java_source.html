@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Invaders:  Fichier source de Bonus.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Invaders
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bonus.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bonus_8java.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> javafx.scene.image.ImageView;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> javafx.scene.image.Image;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> javafx.scene.text.Text;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> java.lang.reflect.Array;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> javafx.util.Pair;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">import</span> java.util.Arrays;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">import</span> java.lang.Math;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">import</span> javafx.scene.media.AudioClip;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">import</span> java.io.File;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_bonus.html">   17</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_bonus.html">Bonus</a> <span class="keyword">extends</span> <a class="code" href="class_movit.html">Movit</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> byte nbonus = (byte)5;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> Image[] img_bonus = Movit.imglist(<span class="stringliteral">&quot;Bonus&quot;</span>,nbonus);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">double</span> vitesseY=1.0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_bonus.html#a7ae08569114898b429584cbcec091c4d">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_bonus.html#a7ae08569114898b429584cbcec091c4d">MAXTIME</a>=10.0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_bonus.html#a62d1d7bef5df2d449bc67e1fb1985b5f">   27</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_bonus.html#a62d1d7bef5df2d449bc67e1fb1985b5f">SCOREUP</a>=200;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_bonus.html#ab84109f50f0520fbfb36973c7e937528">   29</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_bonus.html#ab84109f50f0520fbfb36973c7e937528">DISTRECULE</a>=200;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> AudioClip son = <span class="keyword">new</span> AudioClip(<span class="keyword">new</span> File(<span class="stringliteral">&quot;Ressources/Sons/Bonus.wav&quot;</span>).toURI().toString());</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">private</span> Effet actif;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span> Effet inactif;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> time;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_bonus.html#a1d1e2ebe69d7e1ac68e2550f80d2e632">   48</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_bonus.html#a1d1e2ebe69d7e1ac68e2550f80d2e632">Bonus</a>(<span class="keywordtype">double</span> x,<span class="keywordtype">double</span> y){</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        super(img_bonus[randombonus()],0.0,vitesseY,x,y);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        this.setLayoutX(this.getLayoutX()-this.getImage().getWidth()/2);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">int</span> index = Arrays.asList(img_bonus).indexOf(this.getImage());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        Pair&lt;Effet,Effet&gt; act_bonus = get_bonus(index);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        this.actif=act_bonus.getKey();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        this.inactif=act_bonus.getValue();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        this.time=0.0f;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_bonus.html#a09f19db4fdca514ddb4b526c4ed4cc4f">   64</a></span>&#160;    <span class="keyword">public</span> Boolean <a class="code" href="class_bonus.html#a09f19db4fdca514ddb4b526c4ed4cc4f">collide</a>(<a class="code" href="class_player.html">Player</a> p)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">int</span> pX,pY,x,y;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        pX=(int)(p.getLayoutX() + p.getTranslateX());</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        pY=(int)(p.getLayoutY() + p.getTranslateY());</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        x=(int)(this.getLayoutX() + this.getTranslateX());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        y=(int)(this.getLayoutY() + this.getTranslateY());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="class_motor.html">Motor</a>.<a class="code" href="class_motor.html#a810690068c5edddd73d584e0dd19acd4">collide</a>(x, y, <span class="keyword">this</span>.getImage(), pX, pY, p.getImage()) == null)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        son.play();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_bonus.html#a42e90885234abf53398e0c5d0b47cf0d">   83</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_bonus.html#a42e90885234abf53398e0c5d0b47cf0d">proceed</a>(){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        this.setTranslateY(this.getTranslateY() + <a class="code" href="class_movit.html#abfe200611d0a57b9642337e0494ee1f9">vecY</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_bonus.html#a3082cd3a33dee61d0d3d28727508f834">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_bonus.html#a3082cd3a33dee61d0d3d28727508f834">addTimeStep</a>(<span class="keywordtype">float</span> timestep){</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        this.time+=timestep;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">int</span> randombonus(){</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">int</span>[] proba = {0,0,1,1,1,2,2,3,4,4,4,4,4,4};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> proba[(int)(Math.random() * proba.length)];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> Pair&lt;Effet,Effet&gt; get_bonus(<span class="keywordtype">int</span> index){</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">final</span> <a class="code" href="class_player.html">Player</a> player=Game.getMotor().getPlayer();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">final</span> Integer newscore;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">switch</span>(index){</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> Pair&lt;Effet,Effet&gt;(() -&gt; {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    <span class="keywordflow">if</span>(<a class="code" href="class_game.html">Game</a>.<a class="code" href="class_game.html#aa1efcee841a5a0f096b824b1aca2bfb5">getVie</a>().getChildren().size()&lt;5)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                        <a class="code" href="class_game.html">Game</a>.<a class="code" href="class_game.html#aa1efcee841a5a0f096b824b1aca2bfb5">getVie</a>().getChildren().add(<span class="keyword">new</span> ImageView(<span class="keyword">new</span> Image(<span class="stringliteral">&quot;/Ressources/life.png&quot;</span>)));</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                },null);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> Pair&lt;Effet,Effet&gt;(() -&gt; <a class="code" href="class_alien.html">Alien</a>.<a class="code" href="class_alien.html#a3a95e4b5e9e78e0d2355fd344b887569">setDelayTir</a>(<a class="code" href="class_alien.html">Alien</a>.<a class="code" href="class_alien.html#af08813497b68cf8a37fe1fb102e8ff49">getDelayTir</a>()/2),() -&gt; Alien.setDelayTir(Alien.getDelayTir()*2));</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> Pair&lt;Effet,Effet&gt;(() -&gt; {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    player.setDelayTir(player.getDelayTir()/2);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    player.setVitesseTir(player.getVitesseTir()*2);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                }, () -&gt; {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    player.setDelayTir(player.getDelayTir()*2);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    player.setVitesseTir(player.getVitesseTir()/2);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                });</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> Pair&lt;Effet,Effet&gt;(() -&gt; {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    <span class="keywordflow">for</span>(<a class="code" href="class_alien.html">Alien</a> a : <a class="code" href="class_game.html">Game</a>.<a class="code" href="class_game.html#ad2ca85b9da3d4f432e80c4c30d27a04a">getMotor</a>().getAliens())</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                        a.setTranslateY(a.getTranslateY()-<a class="code" href="class_bonus.html#ab84109f50f0520fbfb36973c7e937528">DISTRECULE</a>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                },null);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> Pair&lt;Effet,Effet&gt;(() -&gt; <a class="code" href="class_game.html">Game</a>.<a class="code" href="class_game.html#a88c9ee21de18322252a578965d6d95d5">getScore</a>().setText(Integer.toString(<span class="keyword">new</span> Integer(<a class="code" href="class_game.html">Game</a>.<a class="code" href="class_game.html#a88c9ee21de18322252a578965d6d95d5">getScore</a>().getText())+<a class="code" href="class_bonus.html#a62d1d7bef5df2d449bc67e1fb1985b5f">SCOREUP</a>)),null);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_bonus.html#ae3818b4a920609eecb9e0be60cd7afc9">  166</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_bonus.html#ae3818b4a920609eecb9e0be60cd7afc9">active</a>(){</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        act(actif);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        Game.getMotor().getActiveBonus().add(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="class_bonus.html#a43bd71425625417a8c37e919510f90c3">  175</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_bonus.html#a43bd71425625417a8c37e919510f90c3">inactive</a>(){</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        act(inactif);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> act(Effet e){</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span>(e!=null)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            e.act();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="class_bonus.html#a2912fd692ce4fe1a7b34c4fa14c8fe9f">  190</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_bonus.html#a2912fd692ce4fe1a7b34c4fa14c8fe9f">getTime</a>(){</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span> this.time;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keyword">private</span> <span class="keyword">interface </span>Effet{</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> act();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
+<div class="ttc" id="class_bonus_html_a3082cd3a33dee61d0d3d28727508f834"><div class="ttname"><a href="class_bonus.html#a3082cd3a33dee61d0d3d28727508f834">Bonus.addTimeStep</a></div><div class="ttdeci">void addTimeStep(float timestep)</div><div class="ttdoc">Méthode ajoutant le temps écoulé (timestep) au chronomètre d&#39;activation du bonus. ...</div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00089">Bonus.java:89</a></div></div>
+<div class="ttc" id="class_bonus_html_a42e90885234abf53398e0c5d0b47cf0d"><div class="ttname"><a href="class_bonus.html#a42e90885234abf53398e0c5d0b47cf0d">Bonus.proceed</a></div><div class="ttdeci">void proceed()</div><div class="ttdoc">Méthode actualisant la position d&#39;un bonus. </div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00083">Bonus.java:83</a></div></div>
+<div class="ttc" id="class_motor_html_a810690068c5edddd73d584e0dd19acd4"><div class="ttname"><a href="class_motor.html#a810690068c5edddd73d584e0dd19acd4">Motor.collide</a></div><div class="ttdeci">static Pair&lt; Integer, Integer &gt; collide(int x1, int y1, Image img1, int x2, int y2, Image img2)</div><div class="ttdoc">Methode générale de detection de collision entre deux objets. </div><div class="ttdef"><b>Definition:</b> <a href="_motor_8java_source.html#l00298">Motor.java:298</a></div></div>
+<div class="ttc" id="class_bonus_html_a43bd71425625417a8c37e919510f90c3"><div class="ttname"><a href="class_bonus.html#a43bd71425625417a8c37e919510f90c3">Bonus.inactive</a></div><div class="ttdeci">void inactive()</div><div class="ttdoc">Méthode appelée à la désactivation du bonus. </div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00175">Bonus.java:175</a></div></div>
+<div class="ttc" id="class_bonus_html"><div class="ttname"><a href="class_bonus.html">Bonus</a></div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00017">Bonus.java:17</a></div></div>
+<div class="ttc" id="class_game_html_a88c9ee21de18322252a578965d6d95d5"><div class="ttname"><a href="class_game.html#a88c9ee21de18322252a578965d6d95d5">Game.getScore</a></div><div class="ttdeci">static Text getScore()</div><div class="ttdoc">Methode retournant l&#39;objet Text qui contient le score du joueur. </div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00420">Game.java:420</a></div></div>
+<div class="ttc" id="class_movit_html"><div class="ttname"><a href="class_movit.html">Movit</a></div><div class="ttdef"><b>Definition:</b> <a href="_movit_8java_source.html#l00010">Movit.java:10</a></div></div>
+<div class="ttc" id="class_alien_html_a3a95e4b5e9e78e0d2355fd344b887569"><div class="ttname"><a href="class_alien.html#a3a95e4b5e9e78e0d2355fd344b887569">Alien.setDelayTir</a></div><div class="ttdeci">static void setDelayTir(float delay)</div><div class="ttdoc">Méthode modifiant le delai entre deux tirs. </div><div class="ttdef"><b>Definition:</b> <a href="_alien_8java_source.html#l00254">Alien.java:254</a></div></div>
+<div class="ttc" id="class_movit_html_abfe200611d0a57b9642337e0494ee1f9"><div class="ttname"><a href="class_movit.html#abfe200611d0a57b9642337e0494ee1f9">Movit.vecY</a></div><div class="ttdeci">double vecY</div><div class="ttdoc">vecteur de déplacement vertical </div><div class="ttdef"><b>Definition:</b> <a href="_movit_8java_source.html#l00014">Movit.java:14</a></div></div>
+<div class="ttc" id="class_motor_html"><div class="ttname"><a href="class_motor.html">Motor</a></div><div class="ttdef"><b>Definition:</b> <a href="_motor_8java_source.html#l00020">Motor.java:20</a></div></div>
+<div class="ttc" id="class_bonus_html_a7ae08569114898b429584cbcec091c4d"><div class="ttname"><a href="class_bonus.html#a7ae08569114898b429584cbcec091c4d">Bonus.MAXTIME</a></div><div class="ttdeci">static double MAXTIME</div><div class="ttdoc">Temps maximum durant lequel un bonus est actif. </div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00025">Bonus.java:25</a></div></div>
+<div class="ttc" id="class_alien_html_af08813497b68cf8a37fe1fb102e8ff49"><div class="ttname"><a href="class_alien.html#af08813497b68cf8a37fe1fb102e8ff49">Alien.getDelayTir</a></div><div class="ttdeci">static float getDelayTir()</div><div class="ttdoc">Méthode renvoyant le delai entre deux tirs. </div><div class="ttdef"><b>Definition:</b> <a href="_alien_8java_source.html#l00248">Alien.java:248</a></div></div>
+<div class="ttc" id="class_bonus_html_ab84109f50f0520fbfb36973c7e937528"><div class="ttname"><a href="class_bonus.html#ab84109f50f0520fbfb36973c7e937528">Bonus.DISTRECULE</a></div><div class="ttdeci">static int DISTRECULE</div><div class="ttdoc">Distance de recul des ennemis causée par le bonus &quot;recul&quot;. </div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00029">Bonus.java:29</a></div></div>
+<div class="ttc" id="class_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00036">Game.java:36</a></div></div>
+<div class="ttc" id="class_alien_html"><div class="ttname"><a href="class_alien.html">Alien</a></div><div class="ttdef"><b>Definition:</b> <a href="_alien_8java_source.html#l00015">Alien.java:15</a></div></div>
+<div class="ttc" id="class_bonus_html_a1d1e2ebe69d7e1ac68e2550f80d2e632"><div class="ttname"><a href="class_bonus.html#a1d1e2ebe69d7e1ac68e2550f80d2e632">Bonus.Bonus</a></div><div class="ttdeci">Bonus(double x, double y)</div><div class="ttdoc">Constructeur d&#39;un bonus. </div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00048">Bonus.java:48</a></div></div>
+<div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00013">Player.java:13</a></div></div>
+<div class="ttc" id="class_bonus_html_a62d1d7bef5df2d449bc67e1fb1985b5f"><div class="ttname"><a href="class_bonus.html#a62d1d7bef5df2d449bc67e1fb1985b5f">Bonus.SCOREUP</a></div><div class="ttdeci">static int SCOREUP</div><div class="ttdoc">Score apporté par le bonus &quot;score&quot;. </div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00027">Bonus.java:27</a></div></div>
+<div class="ttc" id="class_bonus_html_ae3818b4a920609eecb9e0be60cd7afc9"><div class="ttname"><a href="class_bonus.html#ae3818b4a920609eecb9e0be60cd7afc9">Bonus.active</a></div><div class="ttdeci">void active()</div><div class="ttdoc">Méthode appelée à l&#39;activation du bonus. </div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00166">Bonus.java:166</a></div></div>
+<div class="ttc" id="class_bonus_html_a09f19db4fdca514ddb4b526c4ed4cc4f"><div class="ttname"><a href="class_bonus.html#a09f19db4fdca514ddb4b526c4ed4cc4f">Bonus.collide</a></div><div class="ttdeci">Boolean collide(Player p)</div><div class="ttdoc">Méthode détectant la collision entre bonus et joueur. </div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00064">Bonus.java:64</a></div></div>
+<div class="ttc" id="class_bonus_html_a2912fd692ce4fe1a7b34c4fa14c8fe9f"><div class="ttname"><a href="class_bonus.html#a2912fd692ce4fe1a7b34c4fa14c8fe9f">Bonus.getTime</a></div><div class="ttdeci">float getTime()</div><div class="ttdoc">Méthode retournant le temps écoulé depuis que le bonus s&#39;est activé </div><div class="ttdef"><b>Definition:</b> <a href="_bonus_8java_source.html#l00190">Bonus.java:190</a></div></div>
+<div class="ttc" id="class_game_html_aa1efcee841a5a0f096b824b1aca2bfb5"><div class="ttname"><a href="class_game.html#aa1efcee841a5a0f096b824b1aca2bfb5">Game.getVie</a></div><div class="ttdeci">static FlowPane getVie()</div><div class="ttdoc">Methode renvoyant le conteneur des vies du joueur. </div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00414">Game.java:414</a></div></div>
+<div class="ttc" id="class_game_html_ad2ca85b9da3d4f432e80c4c30d27a04a"><div class="ttname"><a href="class_game.html#ad2ca85b9da3d4f432e80c4c30d27a04a">Game.getMotor</a></div><div class="ttdeci">static Motor getMotor()</div><div class="ttdoc">Methode renvoyant l&#39;objet &quot;motor&quot; qui représente le moteur du jeu. </div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00408">Game.java:408</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mardi 5 Avril 2016 11:55:28 pour Invaders par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

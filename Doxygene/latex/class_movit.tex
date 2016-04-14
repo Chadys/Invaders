@@ -1,0 +1,124 @@
+\hypertarget{class_movit}{\section{Référence de la classe Movit}
+\label{class_movit}\index{Movit@{Movit}}
+}
+
+
+Graphe d'héritage de Movit\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_movit__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Movit\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_movit__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_movit_a49b9f207b93ff26c86f63a70882e68de}{Movit} (Image img, double vecx, double vecy, double x, double y)
+\begin{DoxyCompactList}\small\item\em Constructeur d'un mobile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static Image\mbox{[}$\,$\mbox{]} \hyperlink{class_movit_a274641e5ce00194f1784063cde95ab49}{imglist} (String s, byte n)
+\begin{DoxyCompactList}\small\item\em Méthode créant un tableau d'images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_movit_a0cd05b4b560be5799e492562f3b539c9}{vec\-X}
+\begin{DoxyCompactList}\small\item\em vecteur de déplacement horizontal \end{DoxyCompactList}\item 
+double \hyperlink{class_movit_abfe200611d0a57b9642337e0494ee1f9}{vec\-Y}
+\begin{DoxyCompactList}\small\item\em vecteur de déplacement vertical \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 10 du fichier Movit.\-java.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_movit_a49b9f207b93ff26c86f63a70882e68de}{\index{Movit@{Movit}!Movit@{Movit}}
+\index{Movit@{Movit}!Movit@{Movit}}
+\subsubsection[{Movit}]{\setlength{\rightskip}{0pt plus 5cm}Movit.\-Movit (
+\begin{DoxyParamCaption}
+\item[{Image}]{img, }
+\item[{double}]{vecx, }
+\item[{double}]{vecy, }
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_movit_a49b9f207b93ff26c86f63a70882e68de}
+
+
+Constructeur d'un mobile. 
+
+Appelle le constructeur d'Image\-View avec l'image donnée en paramètre (Image\-View est un objet Java\-F\-X contenant une image affichable (et réglable). Initialise les vecteurs de déplacement et positionne l'image avec les valeurs passés en argument. 
+
+Définition à la ligne 21 du fichier Movit.\-java.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_movit_a274641e5ce00194f1784063cde95ab49}{\index{Movit@{Movit}!imglist@{imglist}}
+\index{imglist@{imglist}!Movit@{Movit}}
+\subsubsection[{imglist}]{\setlength{\rightskip}{0pt plus 5cm}static Image \mbox{[}$\,$\mbox{]} Movit.\-imglist (
+\begin{DoxyParamCaption}
+\item[{String}]{s, }
+\item[{byte}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_movit_a274641e5ce00194f1784063cde95ab49}
+
+
+Méthode créant un tableau d'images. 
+
+Cette méthode a été créée pour éviter les répétitions dans notre code car que ce soit pour les aliens ou les bonus, on doit créer une liste d'images de tous les types d'aliens/bonus possibles. Ces images sont dans les deux cas stockées dans un dossier homonyme (on leur accole un identifiant numérique pour les distinguer). Pour récupérer la liste il nous suffit d'appeler cette fonction en lui précisant un nombre d'images et le nom du dossier les contenant, cette fonction remplira la liste avec les bons chemins. 
+
+Définition à la ligne 34 du fichier Movit.\-java.
+
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_movit_a0cd05b4b560be5799e492562f3b539c9}{\index{Movit@{Movit}!vec\-X@{vec\-X}}
+\index{vec\-X@{vec\-X}!Movit@{Movit}}
+\subsubsection[{vec\-X}]{\setlength{\rightskip}{0pt plus 5cm}double Movit.\-vec\-X\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_movit_a0cd05b4b560be5799e492562f3b539c9}
+
+
+vecteur de déplacement horizontal 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Définition à la ligne 12 du fichier Movit.\-java.
+
+\hypertarget{class_movit_abfe200611d0a57b9642337e0494ee1f9}{\index{Movit@{Movit}!vec\-Y@{vec\-Y}}
+\index{vec\-Y@{vec\-Y}!Movit@{Movit}}
+\subsubsection[{vec\-Y}]{\setlength{\rightskip}{0pt plus 5cm}double Movit.\-vec\-Y\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_movit_abfe200611d0a57b9642337e0494ee1f9}
+
+
+vecteur de déplacement vertical 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Définition à la ligne 14 du fichier Movit.\-java.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_movit_8java}{Movit.\-java}\end{DoxyCompactItemize}

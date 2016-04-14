@@ -1,0 +1,166 @@
+\hypertarget{class_tir}{\section{Référence de la classe Tir}
+\label{class_tir}\index{Tir@{Tir}}
+}
+
+
+Graphe d'héritage de Tir\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_tir__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Tir\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_tir__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tir_a8841debca4a61907e5837346d864886c}{Tir} (byte index, double vecx, double vecy, double x, double y)
+\begin{DoxyCompactList}\small\item\em Constructeur d'un missile. \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_tir_a46f4dcb5816374e482b88f371048ff37}{deplace} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Methode de déplacement du missile utilisée par la méthode go() \end{DoxyCompactList}\item 
+void \hyperlink{class_tir_a0b2df8832aa86ef2ba9a5835fe2b99fe}{proceed} ()
+\begin{DoxyCompactList}\small\item\em Methode effectuant le deplacement des objets missiles. \end{DoxyCompactList}\item 
+void \hyperlink{class_tir_a7c05e3f344068c7cc9cd802d0e5beefe}{draw} (Graphics\-Context gc)
+\begin{DoxyCompactList}\small\item\em Methode d'affichage d'un missile. \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_tir_a9e55e211b9e34cd50e32fae6f066eb7c}{get\-Destroy} ()
+\begin{DoxyCompactList}\small\item\em Méthode renvoyant le drapeau indiquant si l'alien doit être détruit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 16 du fichier Tir.\-java.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_tir_a8841debca4a61907e5837346d864886c}{\index{Tir@{Tir}!Tir@{Tir}}
+\index{Tir@{Tir}!Tir@{Tir}}
+\subsubsection[{Tir}]{\setlength{\rightskip}{0pt plus 5cm}Tir.\-Tir (
+\begin{DoxyParamCaption}
+\item[{byte}]{index, }
+\item[{double}]{vecx, }
+\item[{double}]{vecy, }
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_tir_a8841debca4a61907e5837346d864886c}
+
+
+Constructeur d'un missile. 
+
+Initialise l'image, les vecteurs et les position de départ des missiles à l'aide du constructeur de \hyperlink{class_movit}{Movit}. Si le vecteur de déplacement vertical est positif, (le missile se déplace vers le bas car il a été tiré par un alien), le missile est repositionné pour le mettre au centre par rapport à la largeur de son image, ce que la méthode shoot() de \hyperlink{class_player}{Player} ou de \hyperlink{class_alien}{Alien} ne peut pas faire sans connaissance des dimensions du missile. Elle renverse ensuite l'image du missile afin qu'il soit dessiné dans le bon sens sans avoir eu besoin de crée une image par direction. Si le missile tiré par le joueur se dirige vers le haut (tiré par le joueur), il est repositionné pour être au dessus et au centre du vaisseau du joueur (en utilisant les dimention du missile). 
+
+Définition à la ligne 30 du fichier Tir.\-java.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_tir_a46f4dcb5816374e482b88f371048ff37}{\index{Tir@{Tir}!deplace@{deplace}}
+\index{deplace@{deplace}!Tir@{Tir}}
+\subsubsection[{deplace}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Tir.\-deplace (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_tir_a46f4dcb5816374e482b88f371048ff37}
+
+
+Methode de déplacement du missile utilisée par la méthode go() 
+
+Cette médhode est appellée pour chaque pixel parcouru par le missile. Le but est tester les collisions sur chaque entité du jeu (y compris les bords). On teste les collisions en utilisant la méthode de collision générale collide() de \hyperlink{class_motor}{Motor}. S'il y a une collision, la fonction détruit le missile. La gestion de collision pour chaque entité est gérée dans les fonctions collide(). Le retour de cette méthode permettra à go() de s'arrêter. 
+\begin{DoxyItemize}
+\item Mise à jour de la position du missile
+\item Test de collision avec le joueur
+\item Test de collision avec les maisons
+\item Test de collision avec les aliens
+\item Test de collision avec les bords du terrain 
+\end{DoxyItemize}
+
+Définition à la ligne 117 du fichier Tir.\-java.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_tir_a46f4dcb5816374e482b88f371048ff37_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tir_a7c05e3f344068c7cc9cd802d0e5beefe}{\index{Tir@{Tir}!draw@{draw}}
+\index{draw@{draw}!Tir@{Tir}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Tir.\-draw (
+\begin{DoxyParamCaption}
+\item[{Graphics\-Context}]{gc}
+\end{DoxyParamCaption}
+)}}\label{class_tir_a7c05e3f344068c7cc9cd802d0e5beefe}
+
+
+Methode d'affichage d'un missile. 
+
+
+
+Définition à la ligne 208 du fichier Tir.\-java.
+
+\hypertarget{class_tir_a9e55e211b9e34cd50e32fae6f066eb7c}{\index{Tir@{Tir}!get\-Destroy@{get\-Destroy}}
+\index{get\-Destroy@{get\-Destroy}!Tir@{Tir}}
+\subsubsection[{get\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Tir.\-get\-Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tir_a9e55e211b9e34cd50e32fae6f066eb7c}
+
+
+Méthode renvoyant le drapeau indiquant si l'alien doit être détruit. 
+
+
+
+Définition à la ligne 214 du fichier Tir.\-java.
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tir_a9e55e211b9e34cd50e32fae6f066eb7c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tir_a0b2df8832aa86ef2ba9a5835fe2b99fe}{\index{Tir@{Tir}!proceed@{proceed}}
+\index{proceed@{proceed}!Tir@{Tir}}
+\subsubsection[{proceed}]{\setlength{\rightskip}{0pt plus 5cm}void Tir.\-proceed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tir_a0b2df8832aa86ef2ba9a5835fe2b99fe}
+
+
+Methode effectuant le deplacement des objets missiles. 
+
+Appelle la méthode go() avec les positions de départ et d'arrivée du missile. 
+
+Définition à la ligne 201 du fichier Tir.\-java.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_tir_8java}{Tir.\-java}\end{DoxyCompactItemize}

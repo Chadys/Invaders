@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Invaders:  Fichier source de Player.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Invaders
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Player.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_8java.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> javafx.scene.image.Image;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> javafx.scene.image.ImageView;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> javafx.scene.layout.FlowPane;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> javafx.scene.media.AudioClip;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> java.io.File;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_player.html">   13</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_player.html">Player</a> <span class="keyword">extends</span> ImageView</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> delay_tir;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> current_delay;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">double</span> deplace;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">double</span> vitesseTir;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">private</span> AudioClip son_impact;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span> AudioClip son_tir;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_player.html#a712a726b07cf901c040116d6d0c5cc66">   37</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_player.html#a712a726b07cf901c040116d6d0c5cc66">Player</a>()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        super(<span class="keyword">new</span> Image(<span class="stringliteral">&quot;/Ressources/Vaisseau-Space.png&quot;</span>));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        son_tir = <span class="keyword">new</span> AudioClip(<span class="keyword">new</span> File(<span class="stringliteral">&quot;Ressources/Sons/TirShip.wav&quot;</span>).toURI().toString());</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        son_impact = <span class="keyword">new</span> AudioClip(<span class="keyword">new</span> File(<span class="stringliteral">&quot;Ressources/Sons/ImpactVaisseau.wav&quot;</span>).toURI().toString());</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        this.relocate(Game.WIDTH/2-this.getImage().getWidth()/2, 640);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        this.delay_tir = 0.6f;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        this.current_delay = 0.0f;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        this.deplace = 0.0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        this.vitesseTir=3.5;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_player.html#a9a32aeb96a7184620e3342244e6d17ad">   55</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player.html#a9a32aeb96a7184620e3342244e6d17ad">proceed</a>(<span class="keywordtype">float</span> timestep)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">double</span> newpos = this.getTranslateX()+deplace;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        current_delay -= timestep;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span>(current_delay &lt; 0.0f)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            current_delay = 0.0f;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span>(this.getLayoutX() + newpos &lt; -(this.getImage().getWidth()/2))</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            this.setTranslateX(-((this.getImage().getWidth() / 2) + this.getLayoutX()));</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this.getLayoutX() + newpos &gt; <a class="code" href="class_game.html">Game</a>.<a class="code" href="class_game.html#a717d94203369772a9d40c0efc20eb779">WIDTH</a> -(<span class="keyword">this</span>.getImage().getWidth() / 2))</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            this.setTranslateX(this.getLayoutX() + (this.getImage().getWidth() / 2));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            this.setTranslateX(newpos);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_player.html#adff9fbff40a2ad4a8fa2b89884e6e7d2">   77</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player.html#adff9fbff40a2ad4a8fa2b89884e6e7d2">shoot</a>()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span>(current_delay &gt; 0.0f)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        son_tir.play();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        current_delay = this.delay_tir;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        Game.getMotor().getTirs().add(<span class="keyword">new</span> <a class="code" href="class_tir.html">Tir</a>((byte)0,0.0,-vitesseTir,this.getLayoutX()+(this.getImage().getWidth()/2)+this.getTranslateX(),this.getLayoutY()));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_player.html#acab62e8dde064015d176aae75fdcd263">   91</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player.html#acab62e8dde064015d176aae75fdcd263">destruct</a>(){</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        son_impact.play();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        FlowPane vie=Game.getVie();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        vie.getChildren().<span class="keyword">remove</span>(0);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span>(vie.getChildren().size()==0)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            Game.setCurrentLevel(4);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_player.html#acce5669fa54c5a76c5e69ad890ded0a6">  101</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="class_player.html#acce5669fa54c5a76c5e69ad890ded0a6">getDeplace</a>(){</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> this.deplace;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_player.html#ae3de1d7541e006a1835428ea05d8ac5c">  107</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player.html#ae3de1d7541e006a1835428ea05d8ac5c">setDeplace</a>(<span class="keywordtype">double</span> pas){</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        this.deplace=pas;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_player.html#af3f440fabf4174f321e854ff8fabd25a">  113</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_player.html#af3f440fabf4174f321e854ff8fabd25a">getDelayTir</a>(){</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> this.delay_tir;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_player.html#a1f3118b8d157fe53c585318d4914fc08">  119</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player.html#a1f3118b8d157fe53c585318d4914fc08">setDelayTir</a>(<span class="keywordtype">float</span> delay){</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        this.delay_tir=delay;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_player.html#a1e53e9e10195f64b4ae551747245c7f2">  125</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="class_player.html#a1e53e9e10195f64b4ae551747245c7f2">getVitesseTir</a>(){</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> this.vitesseTir;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_player.html#a884976391b424945d77108463de3b2b8">  131</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player.html#a884976391b424945d77108463de3b2b8">setVitesseTir</a>(<span class="keywordtype">double</span> vitesse){</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        this.vitesseTir=vitesse;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="ttc" id="class_player_html_af3f440fabf4174f321e854ff8fabd25a"><div class="ttname"><a href="class_player.html#af3f440fabf4174f321e854ff8fabd25a">Player.getDelayTir</a></div><div class="ttdeci">float getDelayTir()</div><div class="ttdoc">Methode renvoyant le delai minimum entre deux tirs. </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00113">Player.java:113</a></div></div>
+<div class="ttc" id="class_player_html_ae3de1d7541e006a1835428ea05d8ac5c"><div class="ttname"><a href="class_player.html#ae3de1d7541e006a1835428ea05d8ac5c">Player.setDeplace</a></div><div class="ttdeci">void setDeplace(double pas)</div><div class="ttdoc">Methode paramètrant le vecteur de deplacement. </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00107">Player.java:107</a></div></div>
+<div class="ttc" id="class_player_html_acce5669fa54c5a76c5e69ad890ded0a6"><div class="ttname"><a href="class_player.html#acce5669fa54c5a76c5e69ad890ded0a6">Player.getDeplace</a></div><div class="ttdeci">double getDeplace()</div><div class="ttdoc">Methode renvoyant le vecteur de déplacement. </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00101">Player.java:101</a></div></div>
+<div class="ttc" id="class_player_html_a1e53e9e10195f64b4ae551747245c7f2"><div class="ttname"><a href="class_player.html#a1e53e9e10195f64b4ae551747245c7f2">Player.getVitesseTir</a></div><div class="ttdeci">double getVitesseTir()</div><div class="ttdoc">Methode renvoyant la vitesse d&#39;un missile tiré </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00125">Player.java:125</a></div></div>
+<div class="ttc" id="class_player_html_a884976391b424945d77108463de3b2b8"><div class="ttname"><a href="class_player.html#a884976391b424945d77108463de3b2b8">Player.setVitesseTir</a></div><div class="ttdeci">void setVitesseTir(double vitesse)</div><div class="ttdoc">Methode paramétrant la vitesse d&#39;un missile tiré </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00131">Player.java:131</a></div></div>
+<div class="ttc" id="class_player_html_adff9fbff40a2ad4a8fa2b89884e6e7d2"><div class="ttname"><a href="class_player.html#adff9fbff40a2ad4a8fa2b89884e6e7d2">Player.shoot</a></div><div class="ttdeci">void shoot()</div><div class="ttdoc">Methode de tir du joueur. </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00077">Player.java:77</a></div></div>
+<div class="ttc" id="class_tir_html"><div class="ttname"><a href="class_tir.html">Tir</a></div><div class="ttdef"><b>Definition:</b> <a href="_tir_8java_source.html#l00016">Tir.java:16</a></div></div>
+<div class="ttc" id="class_game_html_a717d94203369772a9d40c0efc20eb779"><div class="ttname"><a href="class_game.html#a717d94203369772a9d40c0efc20eb779">Game.WIDTH</a></div><div class="ttdeci">static final double WIDTH</div><div class="ttdoc">Largeur de la fenêtre. </div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00059">Game.java:59</a></div></div>
+<div class="ttc" id="class_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00036">Game.java:36</a></div></div>
+<div class="ttc" id="class_player_html_a1f3118b8d157fe53c585318d4914fc08"><div class="ttname"><a href="class_player.html#a1f3118b8d157fe53c585318d4914fc08">Player.setDelayTir</a></div><div class="ttdeci">void setDelayTir(float delay)</div><div class="ttdoc">Methode paramétrant le delai minimum entre deux tirs. </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00119">Player.java:119</a></div></div>
+<div class="ttc" id="class_player_html_a712a726b07cf901c040116d6d0c5cc66"><div class="ttname"><a href="class_player.html#a712a726b07cf901c040116d6d0c5cc66">Player.Player</a></div><div class="ttdeci">Player()</div><div class="ttdoc">Constructeur du joueur. </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00037">Player.java:37</a></div></div>
+<div class="ttc" id="class_player_html_a9a32aeb96a7184620e3342244e6d17ad"><div class="ttname"><a href="class_player.html#a9a32aeb96a7184620e3342244e6d17ad">Player.proceed</a></div><div class="ttdeci">void proceed(float timestep)</div><div class="ttdoc">Methode actualisant la position de Player. </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00055">Player.java:55</a></div></div>
+<div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00013">Player.java:13</a></div></div>
+<div class="ttc" id="class_player_html_acab62e8dde064015d176aae75fdcd263"><div class="ttname"><a href="class_player.html#acab62e8dde064015d176aae75fdcd263">Player.destruct</a></div><div class="ttdeci">void destruct()</div><div class="ttdoc">Methode appelée en cas de collision entre le joueur et un missile. </div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00091">Player.java:91</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mardi 5 Avril 2016 11:55:28 pour Invaders par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<map id="Motor.proceed" name="Motor.proceed">
+<area shape="rect" id="node2" href="$class_player.html#ae3de1d7541e006a1835428ea05d8ac5c" title="Methode paramètrant le vecteur de deplacement. " alt="" coords="173,5,302,32"/>
+<area shape="rect" id="node3" href="$class_player.html#acce5669fa54c5a76c5e69ad890ded0a6" title="Methode renvoyant le vecteur de déplacement. " alt="" coords="173,56,302,83"/>
+<area shape="rect" id="node4" href="$class_player.html#adff9fbff40a2ad4a8fa2b89884e6e7d2" title="Methode de tir du joueur. " alt="" coords="190,107,285,133"/>
+<area shape="rect" id="node5" href="$class_game.html#a6820c58e98b057326b794a928352ff8a" title="Methode changeant la valeur de l&#39;écran sur lequel on se trouve. " alt="" coords="161,157,314,184"/>
+<area shape="rect" id="node6" href="$class_tir.html#a9e55e211b9e34cd50e32fae6f066eb7c" title="Méthode renvoyant le drapeau indiquant si l&#39;alien doit être détruit. " alt="" coords="185,208,290,235"/>
+<area shape="rect" id="node7" href="$class_alien.html#ad09b7f992dd6c43fa713e54ce5e00c6a" title="Méthode détectant la collision avec un alien. " alt="" coords="191,259,283,285"/>
+<area shape="rect" id="node9" href="$class_alien.html#a7fd4cc9ee380d3bc3a31a9b39600d777" title="Méthode renvoyant le drapeau indiquant si l&#39;alien doit être détruit. " alt="" coords="178,309,297,336"/>
+<area shape="rect" id="node10" href="$class_bonus.html#a09f19db4fdca514ddb4b526c4ed4cc4f" title="Méthode détectant la collision entre bonus et joueur. " alt="" coords="187,360,287,387"/>
+<area shape="rect" id="node11" href="$class_bonus.html#a2912fd692ce4fe1a7b34c4fa14c8fe9f" title="Méthode retournant le temps écoulé depuis que le bonus s&#39;est activé " alt="" coords="182,411,293,437"/>
+<area shape="rect" id="node8" href="$class_motor.html#a810690068c5edddd73d584e0dd19acd4" title="Methode générale de detection de collision entre deux objets. " alt="" coords="363,309,459,336"/>
+</map>

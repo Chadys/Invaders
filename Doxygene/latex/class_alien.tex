@@ -1,0 +1,380 @@
+\hypertarget{class_alien}{\section{Référence de la classe Alien}
+\label{class_alien}\index{Alien@{Alien}}
+}
+
+
+Graphe d'héritage de Alien\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_alien__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Alien\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_alien__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_alien_a330e393dc37d83b31ff5b0cc7bcd33c8}{Alien} (byte index, double x, double y)
+\begin{DoxyCompactList}\small\item\em Constructeur d'un alien. \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_alien_ad09b7f992dd6c43fa713e54ce5e00c6a}{collide} (\hyperlink{class_player}{Player} p)
+\begin{DoxyCompactList}\small\item\em Méthode détectant la collision avec un alien. \end{DoxyCompactList}\item 
+void \hyperlink{class_alien_afd48e2f5c93af1286f24a6caacd84919}{proceed} ()
+\begin{DoxyCompactList}\small\item\em Méthode actualisant la position d'un alien. \end{DoxyCompactList}\item 
+void \hyperlink{class_alien_a20b62f53c3fb13b489da812ab0bd5941}{shoot} ()
+\begin{DoxyCompactList}\small\item\em Méthode créant un tir d'alien avec lancement du son. \end{DoxyCompactList}\item 
+void \hyperlink{class_alien_a1d6a17c91905b3e3003edd07fd9210dc}{destruct} ()
+\begin{DoxyCompactList}\small\item\em Méthode appelée lors de la destruction d'un alien. \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_alien_a7fd4cc9ee380d3bc3a31a9b39600d777}{get\-Destroy} ()
+\begin{DoxyCompactList}\small\item\em Méthode renvoyant le drapeau indiquant si l'alien doit être détruit. \end{DoxyCompactList}\item 
+double \hyperlink{class_alien_a006b25db50a54b9cbea4d901ffdd8f82}{get\-Vec\-Y} ()
+\begin{DoxyCompactList}\small\item\em Méthode renvoyant la position en Y d'un missile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static Array\-List$<$ \hyperlink{class_alien}{Alien} $>$ \hyperlink{class_alien_a728d462c9cc08f7ff5f05fb615b73d90}{init} ()
+\begin{DoxyCompactList}\small\item\em Liste de tous les aliens. \end{DoxyCompactList}\item 
+static void \hyperlink{class_alien_a31f78c3f88539292bd6dc386d573229f}{proceed} (float timestep)
+\begin{DoxyCompactList}\small\item\em Méthode actualisant l'état de tous les aliens. \end{DoxyCompactList}\item 
+static void \hyperlink{class_alien_a4590038c5fbebdff0478d3436c86fa57}{addnewline} (byte index, double y)
+\begin{DoxyCompactList}\small\item\em Méthode rajoutant une ligne d'aliens en haut de l'écran lorsqu'il y a de la place. \end{DoxyCompactList}\item 
+static float \hyperlink{class_alien_af08813497b68cf8a37fe1fb102e8ff49}{get\-Delay\-Tir} ()
+\begin{DoxyCompactList}\small\item\em Méthode renvoyant le delai entre deux tirs. \end{DoxyCompactList}\item 
+static void \hyperlink{class_alien_a3a95e4b5e9e78e0d2355fd344b887569}{set\-Delay\-Tir} (float delay)
+\begin{DoxyCompactList}\small\item\em Méthode modifiant le delai entre deux tirs. \end{DoxyCompactList}\item 
+static void \hyperlink{class_alien_ae9744d3b25e37ce733608ebd6ef4a789}{reset\-Vitesse} ()
+\begin{DoxyCompactList}\small\item\em Méthode réinitialisant la vitesse des aliens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 15 du fichier Alien.\-java.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_alien_a330e393dc37d83b31ff5b0cc7bcd33c8}{\index{Alien@{Alien}!Alien@{Alien}}
+\index{Alien@{Alien}!Alien@{Alien}}
+\subsubsection[{Alien}]{\setlength{\rightskip}{0pt plus 5cm}Alien.\-Alien (
+\begin{DoxyParamCaption}
+\item[{byte}]{index, }
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_alien_a330e393dc37d83b31ff5b0cc7bcd33c8}
+
+
+Constructeur d'un alien. 
+
+Appelle le constructeur de \hyperlink{class_movit}{Movit}, l'alien aura pour commencer une vitesse vertical nul et une vitesse horizontale positive (il démarre donc en se déplaçant vers la droite). Met destroy à false et donne à l'alien une valeur (score) correspondant à son index dans la liste d'images. 
+
+Définition à la ligne 45 du fichier Alien.\-java.
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_alien_a330e393dc37d83b31ff5b0cc7bcd33c8_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_alien_a4590038c5fbebdff0478d3436c86fa57}{\index{Alien@{Alien}!addnewline@{addnewline}}
+\index{addnewline@{addnewline}!Alien@{Alien}}
+\subsubsection[{addnewline}]{\setlength{\rightskip}{0pt plus 5cm}static void Alien.\-addnewline (
+\begin{DoxyParamCaption}
+\item[{byte}]{index, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_alien_a4590038c5fbebdff0478d3436c86fa57}
+
+
+Méthode rajoutant une ligne d'aliens en haut de l'écran lorsqu'il y a de la place. 
+
+Cherche l'alien avec l'abcisse la plus petite pour faire démarrer la ligne d'aliens au même x. Puis fait une boucle qui va placer les aliens un à un avec le bon écart et au y précisé en argument. Si la position horizontale s'apprête à dépasser le cadre du jeu, place les aliens qui manquent à gauche du premier qui a été placé. 
+
+Définition à la ligne 154 du fichier Alien.\-java.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_alien_a4590038c5fbebdff0478d3436c86fa57_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_alien_ad09b7f992dd6c43fa713e54ce5e00c6a}{\index{Alien@{Alien}!collide@{collide}}
+\index{collide@{collide}!Alien@{Alien}}
+\subsubsection[{collide}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Alien.\-collide (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{p}
+\end{DoxyParamCaption}
+)}}\label{class_alien_ad09b7f992dd6c43fa713e54ce5e00c6a}
+
+
+Méthode détectant la collision avec un alien. 
+
+Vérifie d'abord si l'alien n'a pas dépassé le bas de la fenêtre (675px), puis appelle la méthode générale de collision du moteur pour voir si un alien est entré en collision avec le joueur. Renvoi vrai si l'un deux tests est vrai. 
+
+Définition à la ligne 86 du fichier Alien.\-java.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_alien_ad09b7f992dd6c43fa713e54ce5e00c6a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_alien_ad09b7f992dd6c43fa713e54ce5e00c6a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_alien_a1d6a17c91905b3e3003edd07fd9210dc}{\index{Alien@{Alien}!destruct@{destruct}}
+\index{destruct@{destruct}!Alien@{Alien}}
+\subsubsection[{destruct}]{\setlength{\rightskip}{0pt plus 5cm}void Alien.\-destruct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_alien_a1d6a17c91905b3e3003edd07fd9210dc}
+
+
+Méthode appelée lors de la destruction d'un alien. 
+
+Ajoute la valeur de l'alien au score de la partie. Met le témoin de destruction de l'alien à vrai pour que le moteur du jeu sache qu'il faut le détruire. Décrémente le compteur du nombre d'alien. A une probabilité de 1/8 d'ajouter un bonus au jeu en appelant le constructeur de \hyperlink{class_bonus}{Bonus}. 
+
+Définition à la ligne 216 du fichier Alien.\-java.
+
+\hypertarget{class_alien_af08813497b68cf8a37fe1fb102e8ff49}{\index{Alien@{Alien}!get\-Delay\-Tir@{get\-Delay\-Tir}}
+\index{get\-Delay\-Tir@{get\-Delay\-Tir}!Alien@{Alien}}
+\subsubsection[{get\-Delay\-Tir}]{\setlength{\rightskip}{0pt plus 5cm}static float Alien.\-get\-Delay\-Tir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_alien_af08813497b68cf8a37fe1fb102e8ff49}
+
+
+Méthode renvoyant le delai entre deux tirs. 
+
+
+
+Définition à la ligne 248 du fichier Alien.\-java.
+
+\hypertarget{class_alien_a7fd4cc9ee380d3bc3a31a9b39600d777}{\index{Alien@{Alien}!get\-Destroy@{get\-Destroy}}
+\index{get\-Destroy@{get\-Destroy}!Alien@{Alien}}
+\subsubsection[{get\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Alien.\-get\-Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_alien_a7fd4cc9ee380d3bc3a31a9b39600d777}
+
+
+Méthode renvoyant le drapeau indiquant si l'alien doit être détruit. 
+
+
+
+Définition à la ligne 236 du fichier Alien.\-java.
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_alien_a7fd4cc9ee380d3bc3a31a9b39600d777_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_alien_a006b25db50a54b9cbea4d901ffdd8f82}{\index{Alien@{Alien}!get\-Vec\-Y@{get\-Vec\-Y}}
+\index{get\-Vec\-Y@{get\-Vec\-Y}!Alien@{Alien}}
+\subsubsection[{get\-Vec\-Y}]{\setlength{\rightskip}{0pt plus 5cm}double Alien.\-get\-Vec\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_alien_a006b25db50a54b9cbea4d901ffdd8f82}
+
+
+Méthode renvoyant la position en Y d'un missile. 
+
+
+
+Définition à la ligne 242 du fichier Alien.\-java.
+
+\hypertarget{class_alien_a728d462c9cc08f7ff5f05fb615b73d90}{\index{Alien@{Alien}!init@{init}}
+\index{init@{init}!Alien@{Alien}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}static Array\-List$<${\bf Alien}$>$ Alien.\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_alien_a728d462c9cc08f7ff5f05fb615b73d90}
+
+
+Liste de tous les aliens. 
+
+Initialise le son joué lors du tir d'une alien et remet les différents délais et vitesses de la classe à leur valeurs initiales. Initialise la liste d'aliens du jeu et appelle le constructeur 5$\ast$11 fois en plaçant chaque alien à sa position (55 pixels entre chaque aliens côte à côte, 50 pixels entre chaque lignes d'aliens). Les aliens sont ajoutés de bas en haut pour que le dernier alien de la liste soit toujours dans la ligne la plus haute (sert pour l'ajout de nouvelles lignes). Initialise le compteur du nombre d'aliens et ajoute une méthode dynamique qui augmente la vitesse des ennemis (et donc la difficulté du jeu) à chaque fois que ce compteur change de valeur. Renvoie la liste ainsi crée. 
+
+Définition à la ligne 60 du fichier Alien.\-java.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_alien_a728d462c9cc08f7ff5f05fb615b73d90_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_alien_afd48e2f5c93af1286f24a6caacd84919}{\index{Alien@{Alien}!proceed@{proceed}}
+\index{proceed@{proceed}!Alien@{Alien}}
+\subsubsection[{proceed}]{\setlength{\rightskip}{0pt plus 5cm}void Alien.\-proceed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_alien_afd48e2f5c93af1286f24a6caacd84919}
+
+
+Méthode actualisant la position d'un alien. 
+
+Ajoute à la position de l'alien ses vitesses horizontale et verticale. 
+
+Définition à la ligne 104 du fichier Alien.\-java.
+
+\hypertarget{class_alien_a31f78c3f88539292bd6dc386d573229f}{\index{Alien@{Alien}!proceed@{proceed}}
+\index{proceed@{proceed}!Alien@{Alien}}
+\subsubsection[{proceed}]{\setlength{\rightskip}{0pt plus 5cm}static void Alien.\-proceed (
+\begin{DoxyParamCaption}
+\item[{float}]{timestep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_alien_a31f78c3f88539292bd6dc386d573229f}
+
+
+Méthode actualisant l'état de tous les aliens. 
+
+Pour chaque alien, met à jour ses vitesses horizontale et verticale \-: Si la vitesse horizontale est à 0.\-0, alors les aliens viennent de descendre d'une ligne, cette fonction remet donc la vitesse verticale à 0.\-0 et remet la vitesse horizontale à sa valeur générale vitesse\-X. Sinon vérifie si au prochain déplacement, un alien va dépasser le cadre du jeu, si c'est le cas, met la vitesse horizontale à 0.\-0, la vitesse verticale à vitesse\-Y (pour que le prochain déplacement des aliens soit de les faire descendre), et inverse vitesse\-X pour qu'au tour de boucle suivant, les aliens se déplacent dans l'autre direction. Enfin, met à jour le delai général en fonction du temps qui s'est écoulé depuis le dernier \hyperlink{class_alien_afd48e2f5c93af1286f24a6caacd84919}{proceed()}, et si le délai est suffisant, fait tirer un alien. 
+
+Définition à la ligne 117 du fichier Alien.\-java.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_alien_a31f78c3f88539292bd6dc386d573229f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_alien_ae9744d3b25e37ce733608ebd6ef4a789}{\index{Alien@{Alien}!reset\-Vitesse@{reset\-Vitesse}}
+\index{reset\-Vitesse@{reset\-Vitesse}!Alien@{Alien}}
+\subsubsection[{reset\-Vitesse}]{\setlength{\rightskip}{0pt plus 5cm}static void Alien.\-reset\-Vitesse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_alien_ae9744d3b25e37ce733608ebd6ef4a789}
+
+
+Méthode réinitialisant la vitesse des aliens. 
+
+Remet la vitesse des aliens à leur valeurs initiales, utilisée en cas de nouvelle partie. 
+
+Définition à la ligne 262 du fichier Alien.\-java.
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_alien_ae9744d3b25e37ce733608ebd6ef4a789_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_alien_a3a95e4b5e9e78e0d2355fd344b887569}{\index{Alien@{Alien}!set\-Delay\-Tir@{set\-Delay\-Tir}}
+\index{set\-Delay\-Tir@{set\-Delay\-Tir}!Alien@{Alien}}
+\subsubsection[{set\-Delay\-Tir}]{\setlength{\rightskip}{0pt plus 5cm}static void Alien.\-set\-Delay\-Tir (
+\begin{DoxyParamCaption}
+\item[{float}]{delay}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_alien_a3a95e4b5e9e78e0d2355fd344b887569}
+
+
+Méthode modifiant le delai entre deux tirs. 
+
+
+
+Définition à la ligne 254 du fichier Alien.\-java.
+
+\hypertarget{class_alien_a20b62f53c3fb13b489da812ab0bd5941}{\index{Alien@{Alien}!shoot@{shoot}}
+\index{shoot@{shoot}!Alien@{Alien}}
+\subsubsection[{shoot}]{\setlength{\rightskip}{0pt plus 5cm}void Alien.\-shoot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_alien_a20b62f53c3fb13b489da812ab0bd5941}
+
+
+Méthode créant un tir d'alien avec lancement du son. 
+
+Ajoute un tir à liste des tirs en appelant le constructeur de \hyperlink{class_tir}{Tir} en fonction de la position de l'alien qui tire (le tire sera positionné juste en dessous et au centre de l'alien) et de la vitesse de tir de cette classe. 
+
+Définition à la ligne 180 du fichier Alien.\-java.
+
+
+
+Voici le graphe des appelants de cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_alien_a20b62f53c3fb13b489da812ab0bd5941_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_alien_8java}{Alien.\-java}\end{DoxyCompactItemize}

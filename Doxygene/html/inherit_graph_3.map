@@ -1,0 +1,7 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node2" href="$class_movit.html" title="Movit" alt="" coords="143,56,198,83"/>
+<area shape="rect" id="node6" href="$class_player.html" title="Player" alt="" coords="141,107,200,133"/>
+<area shape="rect" id="node3" href="$class_alien.html" title="Alien" alt="" coords="252,5,303,32"/>
+<area shape="rect" id="node4" href="$class_bonus.html" title="Bonus" alt="" coords="248,56,307,83"/>
+<area shape="rect" id="node5" href="$class_tir.html" title="Tir" alt="" coords="258,107,297,133"/>
+</map>

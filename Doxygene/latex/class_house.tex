@@ -1,0 +1,157 @@
+\hypertarget{class_house}{\section{Référence de la classe House}
+\label{class_house}\index{House@{House}}
+}
+
+
+Graphe d'héritage de House\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_house__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de House\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_house__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_house_aec83bd8191e1fa3ea56f7428445cc78a}{House} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Constructeur d'une maison. \end{DoxyCompactList}\item 
+void \hyperlink{class_house_a9456283e7505b505f8efb1ec75a0435a}{draw} (Graphics\-Context gc)
+\begin{DoxyCompactList}\small\item\em Methode affichant une maison à la bonne position. \end{DoxyCompactList}\item 
+void \hyperlink{class_house_ac13ee7b6abda22ca38acde2b394bdad7}{destruct} (int x0, int y0, int r)
+\begin{DoxyCompactList}\small\item\em Méthode appelée depuis la classe \hyperlink{class_tir}{Tir} pour la destruction d'une maison. \end{DoxyCompactList}\item 
+int \hyperlink{class_house_ac4d6f6fa84cdf4ae34c870a3fddfcbb3}{get\-X} ()
+\begin{DoxyCompactList}\small\item\em Methode renvoyant l'abscisse de la maison. \end{DoxyCompactList}\item 
+int \hyperlink{class_house_ae416ab0d84b498a9d1fd5c02a751bf4f}{get\-Y} ()
+\begin{DoxyCompactList}\small\item\em Methode renvoyant l'ordonnée de la maison. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static Array\-List$<$ \hyperlink{class_house}{House} $>$ \hyperlink{class_house_a443ed9f0805cbfe9a2b2ce8da60fcbae}{init} ()
+\begin{DoxyCompactList}\small\item\em Methode initialisant la liste de toutes les maisons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 20 du fichier House.\-java.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_house_aec83bd8191e1fa3ea56f7428445cc78a}{\index{House@{House}!House@{House}}
+\index{House@{House}!House@{House}}
+\subsubsection[{House}]{\setlength{\rightskip}{0pt plus 5cm}House.\-House (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_house_aec83bd8191e1fa3ea56f7428445cc78a}
+
+
+Constructeur d'une maison. 
+
+
+\begin{DoxyItemize}
+\item Appel du constructeur de la classe mère pour que la Writable\-Image soit directement fabriquée à partir de l'image 
+\end{DoxyItemize}
+
+Définition à la ligne 33 du fichier House.\-java.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_house_ac13ee7b6abda22ca38acde2b394bdad7}{\index{House@{House}!destruct@{destruct}}
+\index{destruct@{destruct}!House@{House}}
+\subsubsection[{destruct}]{\setlength{\rightskip}{0pt plus 5cm}void House.\-destruct (
+\begin{DoxyParamCaption}
+\item[{int}]{x0, }
+\item[{int}]{y0, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{class_house_ac13ee7b6abda22ca38acde2b394bdad7}
+
+
+Méthode appelée depuis la classe \hyperlink{class_tir}{Tir} pour la destruction d'une maison. 
+
+$\ast$\-Utilise la méthode des cercles grossissant en appelant la méthode circle. Affecte tous les pixels dans un certain rayon (transparence). 
+
+Définition à la ligne 84 du fichier House.\-java.
+
+\hypertarget{class_house_a9456283e7505b505f8efb1ec75a0435a}{\index{House@{House}!draw@{draw}}
+\index{draw@{draw}!House@{House}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void House.\-draw (
+\begin{DoxyParamCaption}
+\item[{Graphics\-Context}]{gc}
+\end{DoxyParamCaption}
+)}}\label{class_house_a9456283e7505b505f8efb1ec75a0435a}
+
+
+Methode affichant une maison à la bonne position. 
+
+
+
+Définition à la ligne 64 du fichier House.\-java.
+
+\hypertarget{class_house_ac4d6f6fa84cdf4ae34c870a3fddfcbb3}{\index{House@{House}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!House@{House}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}int House.\-get\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_house_ac4d6f6fa84cdf4ae34c870a3fddfcbb3}
+
+
+Methode renvoyant l'abscisse de la maison. 
+
+
+
+Définition à la ligne 146 du fichier House.\-java.
+
+\hypertarget{class_house_ae416ab0d84b498a9d1fd5c02a751bf4f}{\index{House@{House}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!House@{House}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int House.\-get\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_house_ae416ab0d84b498a9d1fd5c02a751bf4f}
+
+
+Methode renvoyant l'ordonnée de la maison. 
+
+
+
+Définition à la ligne 152 du fichier House.\-java.
+
+\hypertarget{class_house_a443ed9f0805cbfe9a2b2ce8da60fcbae}{\index{House@{House}!init@{init}}
+\index{init@{init}!House@{House}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}static Array\-List$<${\bf House}$>$ House.\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_house_a443ed9f0805cbfe9a2b2ce8da60fcbae}
+
+
+Methode initialisant la liste de toutes les maisons. 
+
+Instancie le son joué lorsqu'une maison subit une collision
+
+Appelle 4 fois le constructeur de \hyperlink{class_house}{House} pour renvoyer la liste des 4 maisons du jeu à leur bonnes positions
+
+Définition à la ligne 45 du fichier House.\-java.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_house_8java}{House.\-java}\end{DoxyCompactItemize}
