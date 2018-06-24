@@ -1,11 +1,10 @@
-/**
- * \file Bonus.c
+package com.invaders;
+/* *
+ * \file Bonus.java
  * \brief Classe de gestion des bonus
  */
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
-import javafx.scene.text.Text;
-import java.lang.reflect.Array;
 import javafx.util.Pair;
 import java.util.Arrays;
 import java.lang.Math;
@@ -14,7 +13,7 @@ import java.io.File;
 /**
 * \class Bonus extends Movit  
 */
-public class Bonus extends Movit {
+class Bonus extends Movit {
 	/** * \brief Nombre de types d'aliens */
 	private static byte nbonus = (byte)5;
 	/** * \brief Chargement de la liste d'images de bonus avec la méthode de Movit */
@@ -22,19 +21,23 @@ public class Bonus extends Movit {
 	/** * \brief Vitesse de déplacement horizontal */
 	private static double vitesseY=1.0;
 	/** * \brief Temps maximum durant lequel un bonus est actif */ 
-	public static double MAXTIME=10.0;
+	static float MAXTIME = 10;
 	/** * \brief Score apporté par le bonus "score" */
-	public static int SCOREUP=200;
+	private static int SCOREUP=200;
 	/** * \brief Distance de recul des ennemis causée par le bonus "recul"*/
-	public static int DISTRECULE=200;
+	private static int DISTRECULE=200;
 	/** * \brief Son joué lorsque le joueur attrape un bonus */
-	private static AudioClip son = new AudioClip(new File("Ressources/Sons/Bonus.wav").toURI().toString());
+	private static AudioClip son = new AudioClip(new File(Bonus.class.getResource("Sons/Bonus.wav").getFile()).toURI().toString());
 	/** * \brief Suite d'actions réalisées à l'activation d'un bonus */
 	private Effet actif;
 	/** * \brief Suite d'actions réalisées à l'inactivation d'un bonus */
 	private Effet inactif;
-	/** * \brief Chronomètre du temps écoulé depuis l'activation d'un bonus */
-	private float time;
+    /** * \brief Chronomètre du temps écoulé depuis l'activation d'un bonus */
+    private float time;
+    /** * \brief Permet d'avoir accès au type de bonus */
+    private int type;
+    /** * \brief Bonus name for use with logger */
+    private static final String[] bonusName = new String[] {"1 up", "Tirs alien + rapide", "Tirs joueur + rapide", "Aliens reculés", "Score up"};
 
 	/**
  	* \brief Constructeur d'un bonus
@@ -45,11 +48,11 @@ public class Bonus extends Movit {
 	* Récupère la paire d'effet in/actif de l'effet correspondant à l'index et les attribue respectivement à leur variable.
 	* Initialise le chronomètre à 0.0 .
 	*/
-	public Bonus(double x,double y){
+	Bonus(double x, double y){
 		super(img_bonus[randombonus()],0.0,vitesseY,x,y);
 		this.setLayoutX(this.getLayoutX()-this.getImage().getWidth()/2);
-		int index = Arrays.asList(img_bonus).indexOf(this.getImage());
-		Pair<Effet,Effet> act_bonus = get_bonus(index);
+		type = Arrays.asList(img_bonus).indexOf(this.getImage());
+		Pair<Effet,Effet> act_bonus = get_bonus();
 		this.actif=act_bonus.getKey();
 		this.inactif=act_bonus.getValue();
 		this.time=0.0f;
@@ -61,7 +64,7 @@ public class Bonus extends Movit {
 	* Joue un son si le joueur a attrapé le bonus.
 	* Renvoie vrai ou faux en fonction.
 	*/
-	public Boolean collide(Player p)
+	Boolean collide(Player p)
 	{
 		int pX,pY,x,y;
 		
@@ -80,13 +83,13 @@ public class Bonus extends Movit {
 	*
 	* Ajoute à l'ordonné du bonus sa vitesse verticale. Le bonus ne chutant que vers le bas, il n'a pas de déplacement horizontal.
 	*/
-	public void proceed(){
+	void proceed(){
 		this.setTranslateY(this.getTranslateY() + vecY);
 	}
 	/**
  	* \brief Méthode ajoutant le temps écoulé (timestep) au chronomètre d'activation du bonus 
 	*/
-	public void addTimeStep(float timestep){
+	void addTimeStep(float timestep){
 		this.time+=timestep;
 	}
 	/**
@@ -100,7 +103,7 @@ public class Bonus extends Movit {
 	* Bonus "recul"      : 1/14
 	* Bonus "score"      : 3/7
 	*/
-	private static int randombonus(){
+	static int randombonus(){
 		int[] proba = {0,0,1,1,1,2,2,3,4,4,4,4,4,4};
 		return proba[(int)(Math.random() * proba.length)];
 	}
@@ -124,38 +127,38 @@ public class Bonus extends Movit {
 	*		Activation    : Augmente le score du joueur de la valeur SCOREUP.
 	*		Désactivation : Aucun effet.
 	*/
-	private static Pair<Effet,Effet> get_bonus(int index){
+	private Pair<Effet,Effet> get_bonus(){
 		final Player player=Game.getMotor().getPlayer();
-		final Integer newscore;
 
-		switch(index){
-			/** * \brief Rajoute une vie au joueur s'il en a moins de cinq */
+        Game.getLogger().trace("Création bonus {}", bonusName[type]);
+		switch(type){
+			/* * * \brief Rajoute une vie au joueur s'il en a moins de cinq */
 			case 0:
-				return new Pair<Effet,Effet>(() -> {
+				return new Pair<>(() -> {
 					if(Game.getVie().getChildren().size()<5)
-						Game.getVie().getChildren().add(new ImageView(new Image("/Ressources/life.png")));
+						Game.getVie().getChildren().add(new ImageView(new Image(Bonus.class.getResource("Images/life.png").toExternalForm())));
 				},null);
-			/** * \brief Accélère la cadence de tir des aliens (malus) */
+			/* * * \brief Accélère la cadence de tir des aliens (malus) */
 			case 1:
-				return new Pair<Effet,Effet>(() -> Alien.setDelayTir(Alien.getDelayTir()/2),() -> Alien.setDelayTir(Alien.getDelayTir()*2));
-			/** * \brief Accélère la cadence de tir du joueur */
+				return new Pair<>(() -> Alien.setDelayTir(Alien.getDelayTir()/2),() -> Alien.setDelayTir(Alien.getDelayTir()*2));
+			/* * * \brief Accélère la cadence de tir du joueur */
 			case 2:
-				return new Pair<Effet,Effet>(() -> {
+				return new Pair<>(() -> {
 					player.setDelayTir(player.getDelayTir()/2);
 					player.setVitesseTir(player.getVitesseTir()*2);
 				}, () -> {
 					player.setDelayTir(player.getDelayTir()*2);
 					player.setVitesseTir(player.getVitesseTir()/2);
 				});
-			/** * \brief Fait reculer tous les aliens */
+			/* * * \brief Fait reculer tous les aliens */
 			case 3:
-				return new Pair<Effet,Effet>(() -> {
+				return new Pair<>(() -> {
 					for(Alien a : Game.getMotor().getAliens())
 						a.setTranslateY(a.getTranslateY()-DISTRECULE);
 				},null);
-			/** * \brief Augmente le score */
+			/* * * \brief Augmente le score */
 			default:
-				return new Pair<Effet,Effet>(() -> Game.getScore().setText(Integer.toString(new Integer(Game.getScore().getText())+SCOREUP)),null);
+				return new Pair<>(() -> Game.getScore().setText(Integer.toString(new Integer(Game.getScore().getText())+SCOREUP)),null);
 		}
 	}
 	/**
@@ -163,7 +166,8 @@ public class Bonus extends Movit {
 	*
 	* Lance l'Effet "actif" du bonus puis rajoute ce bonus à la liste d'effets en cours d'activation.
 	*/
-	public void active(){
+	void active(){
+        Game.getLogger().trace("Activation bonus {}", bonusName[type]);
 		act(actif);
 		Game.getMotor().getActiveBonus().add(this);
 	}
@@ -172,7 +176,8 @@ public class Bonus extends Movit {
 	*
 	* Lance l'Effet "inactif" du bonus.
 	*/
-	public void inactive(){
+	void inactive(){
+        Game.getLogger().trace("Désactivation bonus {}", bonusName[type]);
 		act(inactif);
 	}
 	/**
@@ -187,7 +192,7 @@ public class Bonus extends Movit {
 	/**
  	* \brief Méthode retournant le temps écoulé depuis que le bonus s'est activé
 	*/
-	public float getTime(){
+	float getTime(){
 		return this.time;
 	}
 
@@ -198,6 +203,6 @@ public class Bonus extends Movit {
 	* Il suffira alors d'appeler la méthode act() de cet Effet pour que ces actions se produisent.
 	*/
 	private interface Effet{
-		public void act();
+		void act();
 	}
 }

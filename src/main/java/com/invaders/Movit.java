@@ -1,5 +1,6 @@
-/**
- * \file Movit.c
+package com.invaders;
+/* *
+ * \file Movit.java
  * \brief Classe de gestion des mobiles
  */
 import javafx.scene.image.ImageView;
@@ -7,7 +8,7 @@ import javafx.scene.image.Image;
 /**
 * \class Movit extends ImageView
 */
-public class Movit extends ImageView{
+class Movit extends ImageView{
 	/** * \brief vecteur de déplacement horizontal */
 	protected double vecX;
 	/** * \brief  vecteur de déplacement vertical */
@@ -18,7 +19,7 @@ public class Movit extends ImageView{
 	* Appelle le constructeur d'ImageView avec l'image donnée en paramètre (ImageView est un objet JavaFX contenant une image affichable (et réglable).
 	* Initialise les vecteurs de déplacement et positionne l'image avec les valeurs passés en argument.
 	*/
-	public Movit(Image img, double vecx, double vecy, double x, double y){
+	Movit(Image img, double vecx, double vecy, double x, double y){
 		super(img);
 		this.vecX=vecx;
 		this.vecY=vecy;
@@ -31,10 +32,10 @@ public class Movit extends ImageView{
 	* Ces images sont dans les deux cas stockées dans un dossier homonyme (on leur accole un identifiant numérique pour les distinguer).
 	* Pour récupérer la liste il nous suffit d'appeler cette fonction en lui précisant un nombre d'images et le nom du dossier les contenant, cette fonction remplira la liste avec les bons chemins.
 	*/
-	public static Image[] imglist(String s, byte n){
+	static Image[] imglist(String s, byte n){
 		Image[] list = new Image[n];
 		for(int i=0; i<n; i++)
-			list[i]=new Image("Ressources/"+s+"/"+s+(i+1)+".png");
+			list[i]=new Image(Movit.class.getResource("Images/"+s+"/"+s+(i+1)+".png").toExternalForm());
 		return list;
 	}
 }

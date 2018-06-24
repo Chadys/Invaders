@@ -1,16 +1,18 @@
-/**
- * \file Player.c
+package com.invaders;
+/* *
+ * \file Player.java
  * \brief Classe de gestion du joueur
  */
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.media.AudioClip;
+
 import java.io.File;
 /**
 * \class Player extends ImageView
 */
-public class Player extends ImageView
+class Player extends ImageView
 {
 	/** * \brief Délai minimum entre deux tirs du joueur */
 	private float delay_tir;
@@ -34,11 +36,12 @@ public class Player extends ImageView
 	* Initialise les vecteurs, délai et chronomètre à leur valeur de départ.
 	* Player n'hérite pas de Movit car il ne possède pas de vecteur de déplacement vertical et qu'on a besoin d'utiliser relocate() après avoir défini son image.
 	*/
-	public Player()
+	Player()
 	{
-		super(new Image("/Ressources/Vaisseau-Space.png"));
-		son_tir = new AudioClip(new File("Ressources/Sons/TirShip.wav").toURI().toString());
-		son_impact = new AudioClip(new File("Ressources/Sons/ImpactVaisseau.wav").toURI().toString());
+		super(new Image(Player.class.getResource("Images/Vaisseau-Space.png").toExternalForm()));
+        Game.getLogger().debug("Création du vaisseau joueur");
+		son_tir = new AudioClip(new File(getClass().getResource("Sons/TirShip.wav").getFile()).toURI().toString());
+		son_impact = new AudioClip(new File(getClass().getResource("Sons/ImpactVaisseau.wav").getFile()).toURI().toString());
 		this.relocate(Game.WIDTH/2-this.getImage().getWidth()/2, 640);
 		this.delay_tir = 0.6f;
 		this.current_delay = 0.0f;
@@ -52,7 +55,7 @@ public class Player extends ImageView
 	* Actualise la position du joueur en l'empéchant de disparaître du cadre du jeu.
 	* Si le joueur sors du cadre en ajoutant le vecteur de déplacement à la position actuelle, alors on le positionne à la limite.
 	*/
-	public void proceed(float timestep)
+	void proceed(float timestep)
 	{
 		double newpos = this.getTranslateX()+deplace;
 		
@@ -74,10 +77,11 @@ public class Player extends ImageView
 	* Si le délai minimum entre deux tirs n'est pas encore écoulé, ne fais rien.
 	* Sinon, joue le son du tir, réinitialise le délai minimum, et ajoute un nouveau tir à la liste des tirs en appelant le constructeur de Tire en fonction de la position du joueur et de sa vitesse de tir.
 	*/
-	public void shoot()
+	void shoot()
 	{
 		if(current_delay > 0.0f)
 			return;
+        Game.getLogger().trace("Tir vaisseau");
 		son_tir.play();
 		current_delay = this.delay_tir;
 		Game.getMotor().getTirs().add(new Tir((byte)0,0.0,-vitesseTir,this.getLayoutX()+(this.getImage().getWidth()/2)+this.getTranslateX(),this.getLayoutY()));
@@ -88,47 +92,50 @@ public class Player extends ImageView
 	* Joue le son de collision entre le joueur et un missile.
 	* Retire une vie au joueur et, s'il n'en a plus, met le jeu sur l'écran de gameover.
 	*/
-	public void destruct(){
+	void destruct(){
+        Game.getLogger().debug("Impact sur le vaisseau joueur");
 		son_impact.play();
 		FlowPane vie=Game.getVie();
 		vie.getChildren().remove(0);
-		if(vie.getChildren().size()==0)
-			Game.setCurrentLevel(4);
+		if(vie.getChildren().size()==0) {
+            Game.getLogger().trace("Le vaisseau joueur a été détuit");
+            Game.setCurrentLevel(4);
+        }
 	}
 	/**
  	* \brief Methode renvoyant le vecteur de déplacement
 	*/
-	public double getDeplace(){
+	double getDeplace(){
 		return this.deplace;
 	}
 	/**
  	* \brief Methode paramètrant le vecteur de deplacement
 	*/
-	public void setDeplace(double pas){
+	void setDeplace(double pas){
 		this.deplace=pas;
 	}
 	/**
  	* \brief Methode renvoyant le delai minimum entre deux tirs
 	*/
-	public float getDelayTir(){
+	float getDelayTir(){
 		return this.delay_tir;
 	}
 	/**
  	* \brief Methode paramétrant le delai minimum entre deux tirs
 	*/
-	public void setDelayTir(float delay){
+	void setDelayTir(float delay){
 		this.delay_tir=delay;
 	}
 	/**
  	* \brief Methode renvoyant la vitesse d'un missile tiré
 	*/
-	public double getVitesseTir(){
+	double getVitesseTir(){
 		return this.vitesseTir;
 	}
 	/**
  	* \brief Methode paramétrant la vitesse d'un missile tiré
 	*/
-	public void setVitesseTir(double vitesse){
+	void setVitesseTir(double vitesse){
 		this.vitesseTir=vitesse;
 	}
 }
